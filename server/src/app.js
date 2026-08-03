@@ -8,6 +8,14 @@ import transactionRouter from "./routes/transaction.route.js";
 import currencyRouter from "./routes/currency.route.js";
 
 const app = express();
+const limiter = rateLimit({
+  windowMs: 1000 * 60 * 15,
+  limit: 100,
+  message: {
+    success: false,
+    message: "Too many requests, try again later",
+  },
+});
 
 app.use(helmet());
 app.use(
@@ -19,6 +27,7 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(limiter);
 app.use("/api/users", userRouter);
 app.use("/api/transactions", transactionRouter);
 app.use("/api/update-currency", currencyRouter);
