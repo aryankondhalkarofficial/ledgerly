@@ -5,6 +5,7 @@ import rateLimit from "express-rate-limit";
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/user.route.js";
 import transactionRouter from "./routes/transaction.route.js";
+import currencyRouter from "./routes/currency.route.js";
 
 const app = express();
 
@@ -20,5 +21,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/users", userRouter);
 app.use("/api/transactions", transactionRouter);
+app.use("/api/update-currency", currencyRouter);
 
 export default app;
