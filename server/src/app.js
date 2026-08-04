@@ -30,6 +30,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(limiter);
 app.use("/api/users", userRouter);
 app.use("/api/transactions", transactionRouter);
-app.use("/api/update-currency", currencyRouter);
+app.use("/api/currency", currencyRouter);
 
 export default app;
