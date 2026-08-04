@@ -1,3 +1,8 @@
+## Live Demo
+
+Frontend: https://ledgerly-rust-eight.vercel.app
+Backend: https://ledgerly-ejpm.onrender.com
+
 # Ledgerly
 
 A modern full-stack personal finance tracker that helps users manage income, expenses, categories, and spending trends with secure authentication and a polished responsive interface.
