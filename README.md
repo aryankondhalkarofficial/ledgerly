@@ -1,7 +1,6 @@
 ## Live Demo
 
 Frontend: https://ledgerly-rust-eight.vercel.app
-Backend: https://ledgerly-ejpm.onrender.com
 
 # Ledgerly
 
